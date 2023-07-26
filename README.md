@@ -20,7 +20,7 @@ pip install -r requirements.txt
 ```
 
 ## Uso
-Accede a la API a través de la URL: http://localhost:8000/api/
+Accede a la API a través de la URL: http://localhost:8000/mascotas/v1/
 Puedes utilizar herramientas como curl, httpie, o un cliente API como Postman para interactuar con la API.
 ## Endpoints
 ## Developers
