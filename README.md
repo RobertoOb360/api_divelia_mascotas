@@ -17,3 +17,5 @@ Bienvenido al proyecto APIde Mascotas. Este es un proyecto desarrollado en Djang
 
 ```bash
 pip install -r requirements.txt
+
+
