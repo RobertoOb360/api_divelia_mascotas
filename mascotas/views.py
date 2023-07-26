@@ -37,6 +37,9 @@ class AsociarJugueteMascotaView(generics.CreateAPIView):
             mascota = Mascota.objects.get(id=mascota_id)
         except Mascota.DoesNotExist:
             return Response({"detail": "Mascota no encontrada."}, status=status.HTTP_404_NOT_FOUND)
+        
+        if Juguete_Mascota.objects.filter(mascota=mascota).count() >= 3:
+            return Response({"detail": "La mascota ya tiene el máximo de juguetes permitidos."}, status=status.HTTP_400_BAD_REQUEST)
 
         # Asociar el juguete a la mascota y guardar
         serializer = self.get_serializer(data=request.data)
